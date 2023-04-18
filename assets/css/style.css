@@ -1,0 +1,32 @@
+/* Utilizar Flexbox para la navegación */
+nav ul {
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+  }
+  
+  /* Utilizar Grid para la estructura de la página */
+  main {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 1rem;
+  }
+  
+  section {
+    border: 1px solid #ccc;
+    padding: 1rem;
+    border-radius: 5px;
+  }
+  /* Agregar una transición al encabezado */
+header h1 {
+    transition: color 0.5s ease;
+  }
+  
+  header h1:hover {
+    color: red;
+  }
+  
+  /* Agregar una animación al botón de contacto */
+  button {
+    animation: pulse 1s ease-in-out infinite;
+  }

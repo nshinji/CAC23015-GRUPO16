@@ -215,9 +215,7 @@ section {
   max-height: 100px;
   max-width: 100px;
 }
-.fa-node{
-  color: #3C873A;
-}
+
 
 .fa-html5{
   color: #e34c26;
@@ -235,8 +233,8 @@ section {
   color: #f34f29;
 }
 
-.fa-react{
-  color: var(--blueReact);
+.fa-python{
+  color: #4B8BBE;
 }
 
 

@@ -49,18 +49,6 @@ function intersectionHandler(entry) {
   }
 }
 
-// window.addEventListener("mousemove", parallax);
-
-// function parallax(e) {
-//   elements.forEach((item) => {
-//     const speed = item.getAttribute("data-speed");
-//     console.log(speed);
-//     const x = (window.innerWidth - e.pageX * speed) / 100;
-//     const y = (window.innerHeight - e.pageY * speed) / 100;
-//     item.style.transform = `translateX(${x}px) translateY(${y}px)`;
-//   });
-// }
-
 ScrollReveal().reveal(".navbar", { delay: 250 });
 ScrollReveal().reveal(".home__profile", { delay: 350 });
 ScrollReveal().reveal(".home__title--primary", { delay: 350 });

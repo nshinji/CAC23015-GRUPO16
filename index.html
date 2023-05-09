@@ -7,20 +7,28 @@
   
   <!-- Enlazar archivos CSS -->
   <link rel="stylesheet" href="./assets/css/style.css" />
-  }<!-- Enlazar archivos JavaScript -->
+  <!-- Enlazar archivos JavaScript -->
 </head>
 <body>
   <!-- Encabezado del sitio web -->
   <header>
-    <h1>Blog de Programación</h1>
-    <nav>
-      <ul>
-        <li><a href="index.html">Inicio</a></li>
-        <li><a href="blog.html">Blog</a></li>
-        <li><a href="contacto.html">Contacto</a></li>
-        <li><a href="sobre-nosotros.html">Sobre Nosotros</a></li>
-      </ul>
-    </nav>
+    <div class="contenedor">
+      <h1>Blog de Programación</h1>
+      <input type="checkbox" id="menu-check">
+      <label id="menu" for="menu-check">
+          <span id="menu-abrir">&#9776;</span>
+          <span ID="menu-cerrar">X</span>
+      </label>
+
+      <nav class="nav">
+        <ul>
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="contacto.html">Contacto</a></li>
+          <li><a href="sobre-nosotros.html">Sobre Nosotros</a></li>
+        </ul>
+      </nav>
+    </div>    
   </header>
   <!-- Contenido de la página -->
   <main>

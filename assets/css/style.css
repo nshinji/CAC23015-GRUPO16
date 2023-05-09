@@ -1,6 +1,7 @@
 /* Utilizar Flexbox para la navegación */
 nav ul {
     display: flex;
+    border: 1px solid #ccc;
     justify-content: space-between;
     list-style: none;
   }
@@ -20,6 +21,7 @@ nav ul {
   /* Agregar una transición al encabezado */
 header h1 {
     transition: color 0.5s ease;
+    border: 1px solid #ccc;
   }
   
   header h1:hover {
@@ -30,3 +32,63 @@ header h1 {
   button {
     animation: pulse 1s ease-in-out infinite;
   }
+  header div.contenedor {
+    place-content: flex-start;
+  }
+  header div.contenedor nav {
+    width:70%;
+    display:flex;
+    place-content: space-between;
+  }
+  #menu, #menu-check {
+    display: none;
+  }
+  @media only screen and (max-width: 900px) {
+  header div.contenedor, header div.contenedor ul, header div.contenedor ul li {
+    display: inline;
+    }
+    header div.contenedor nav {
+      width:100%;
+      display: inline;
+    }
+  }
+  @media only screen and (max-width: 700px) {
+    header div.contenedor {
+      display:flex;
+      place-content: space-between;
+    }
+    #menu-check:not(:checked) ~ nav{ 
+      display:none;
+    }
+    #menu-check:checked ~ nav{ 
+      display:block;
+    }
+    #menu {
+      display: block;
+      position: absolute;
+      right: 0.5em;
+      top:0.5em;
+    }
+    #menu-cerrar {
+      display:none
+    }
+    #menu-check:checked ~ label #menu-abrir{ 
+      display:none;
+    }
+    #menu-check:checked ~ label #menu-cerrar{ 
+      display:block;
+    }
+    header div.contenedor nav {
+    position: absolute;
+    top:0;
+    right:0;
+    height: 100%;
+    background-color:rgb(37, 37, 37);
+    padding-top: 0.5em;
+    padding-right:1.5em ;
+    opacity: 0.8;
+    
+
+    }
+  }
+  

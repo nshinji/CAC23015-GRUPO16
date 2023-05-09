@@ -40,6 +40,7 @@ header h1 {
     display:flex;
     place-content: space-between;
   }
+  
   #menu, #menu-check {
     display: none;
   }
@@ -68,6 +69,7 @@ header h1 {
       position: absolute;
       right: 0.5em;
       top:0.5em;
+      z-index: 9999;
     }
     #menu-cerrar {
       display:none
@@ -87,7 +89,7 @@ header h1 {
     padding-top: 0.5em;
     padding-right:1.5em ;
     opacity: 0.8;
-    
+
 
     }
   }

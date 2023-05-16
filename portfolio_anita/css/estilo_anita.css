@@ -1,0 +1,109 @@
+ @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    font-size:large;
+    font-family: "oswald"; 
+}
+
+
+#nav {
+    padding:20px;
+    background: rgb(250, 136, 155);
+    display: flex;
+    flex-wrap: wrap;
+    margin: auto;
+}
+ 
+.nav-enlace {
+    background: rgb(235, 188, 182);
+    color: black;
+    padding:10px;
+    text-decoration: none;
+    border-radius: 15px;
+}
+
+.nav-enlace:hover{
+    background:rgb(235, 168, 255); 
+}
+
+
+.imgIcono{
+    background-color:rgba(176, 211, 252, 0.144);
+    text-align: center;
+}
+
+.img{
+    padding: 40px;
+    height: 280px;
+    width: 300px;
+    border-radius: 45%;
+}
+
+#titulo{
+    text-transform: uppercase;
+    font-size: x-large;
+}
+
+
+.sobremi{
+    background-color:rgba(25, 92, 169, 0.144);
+    padding-top: 5%;
+    padding-bottom: 5%;
+    text-align: center;
+}
+
+#portfolio{
+    background-color:rgba(9, 30, 54, 0.144);
+    padding-top: 5%;
+    padding-bottom: 5%;
+    text-align: center;
+    color: black;
+}
+
+.flex-container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.style-image{
+    padding: 40px;
+    height: 280px;
+    width: 300px;
+    border-radius: 45%;
+    transition: 0.4s ease;
+    opacity: 0.6;
+}
+
+.style-image:hover{
+    opacity: 1;
+    cursor: pointer;
+    transform: scale(1.1);
+}
+
+
+#contacto{
+    background-color: rgb(235, 188, 182);
+    color: black;
+    text-align: center;
+}
+
+.container-body{
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.iconos {
+    height: 50px;
+    width: 50px;
+  
+  }
+
+.casa {
+    height: 60px;
+    width: 60px;
+    
+  }

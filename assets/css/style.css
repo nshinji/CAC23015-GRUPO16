@@ -117,11 +117,12 @@ header h1 {
   }
   .carousel-container {
     width: 90%;
-    max-width: 120em;
+    max-width: 70em;
     background-color: aqua;
-    display: flex;
-    justify-content: center;
+    overflow: hidden;
  
+   
+    /*overflow: hidden;*/
   }
   .carousel-container .big {
     width: 400%;
@@ -131,16 +132,20 @@ header h1 {
     flex-flow: row nowrap;
     justify-content: flex-start;
     align-items: center;
+    transition: all .5s ease;
+    transform: translateX(0%);
   }
-  /*.carousel {
+  .carousel {
     position: relative;
-    max-width: 600px;
-    max-height: 400px;
+    max-width: 1000px;
+    min-width: 500px;
+    height: 90%;
     margin: 30px;
-    /*overflow: hidden;
-    }*/
+    overflow: hidden;
+    }
   .carousel-container .carousel{
     width: calc(100% / 4 );
+    max-width: 70em;
     background-color: beige;
 
   }
@@ -161,8 +166,11 @@ header h1 {
   .carousel-card h2 {
     margin-top: 0;
   }
+  
   .carousel-container .dots{
+    bottom: 0;
     width: 100%;
+  
     background-color: #333;
     padding: 1em;
    
@@ -176,5 +184,10 @@ header h1 {
     height: 2em;
     background-color: blue;
     margin: 1em;
+  }
+  .carousel-container .dot.active{
+
+    background-color: rgb(0, 255, 55);
+    
   }
   

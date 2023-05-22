@@ -1,0 +1,349 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #f1ebeb;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.menu{
+    width: 100%;
+    height: 150px;
+    margin: auto;
+    padding: 25px 0 25px 0;
+    display: flex;
+    justify-content:flex-end;
+    background-image: url(/portfolio_andy/img/Banner.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.menu ul{
+    display: inline-flex;
+    align-items: center;
+    background-color:#0c0606;
+}
+
+.menu ul li{
+    font-size: 10px;
+    list-style: none;
+    margin: 0 20px;
+    position: relative;
+}
+
+.menu ul li::before{
+    content: "";
+    height: 3px;
+    width: 0%;
+    background: #b30053;
+    position: absolute;
+    left: 0;
+    bottom: -2px;
+    transition: 0.5s ease-out;
+}
+
+.menu ul li:hover::before{
+    width: 100%;
+}
+
+.menu ul li a{
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.2rem;
+    display: block;
+    background-color: #000000;
+}
+
+.contenido-principal{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100%;
+    height: 100%;
+}
+
+.contenedor{
+    display: flex;
+    flex-direction: row;
+    width: 75%;
+    justify-content: space-between;
+    align-self: center;
+    overflow: none;
+    max-width: 1300px;
+    padding-top: 20px;
+}
+
+.presentacion-texto{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.presentacion-nombre {
+    flex-direction: column;
+}
+
+h1{
+    font-size: 5rem;
+}
+
+h3::first-letter {
+    color: #b30053;
+}
+h4::first-letter {
+    color: #b30053;
+}
+
+h5::first-letter {
+    color: #b30053;
+}
+
+h1::first-letter {
+    color: #b30053;
+}
+
+h2 ,h3, h4, h5{
+    font-size: 2rem;
+    align-self: flex-start;
+}
+
+.presentacion-foto img{
+    width: 300px;
+}
+
+.sobre-mi-img img{
+    width: 300px;
+}
+
+.sobre-mi-texto{
+    font-size: 1rem;
+    padding: 20px;
+    width: 90%;
+    align-self:center;
+    align-content: center;
+}
+
+.sobre-mi-texto p{
+    font-size: 1rem;
+    padding: 20px;
+    align-self:center;
+    align-content: center;
+}
+
+.contenedor-titulado{
+    display: flex;
+    flex-direction: column;
+    width: 75%;
+    justify-content: center;
+    align-self: center;
+    overflow: none;
+    max-width: 1300px;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+.tecnologias-titulo{
+    font-size: 1rem;
+    align-self: flex-start;
+    margin-bottom: 20px;
+}
+
+.tecnologias-iconos{
+    display: inline-block;
+    align-self: center;
+    font-size: 90px;
+}
+
+.tecnologias-iconos i{
+    padding: 20px;
+}
+
+.formulario-titulo{
+    display: inline-block;
+    align-self: flex-start;
+    font-size: 1rem;
+}
+.formulario-titulo p{
+    width: 90%;
+}
+
+form label{
+    display: inline-block;
+    margin-bottom: 10px;
+    font-size: 1rem;
+}
+
+.formulario-campos{
+    padding-bottom: 10px;
+}
+
+.formulario-input{
+    background-color: white;
+    border-radius: 5px;
+    width: 100%;
+    padding: 5px;
+}
+
+.btn{
+    border-radius: 5px;
+    display: inline-block;
+    padding: 10px 10px;
+    background-color: #d1d1d1;
+}
+
+.pie-de-pagina{
+    display: flex;
+    justify-content: center;
+    margin: auto;
+    padding: 40px 0 40px 0;
+    background-image: url(/portfolio_andy/img/Banner.jpg);
+    color: #fcfcfc;
+}
+
+.pie-de-pagina p{
+    background-color: #000000;
+    color: #b30053;
+    padding: 0px 3px 0px 3px;
+    background-color: transparent;
+}
+
+@media (max-width: 576px){
+    .menu ul{
+        width: 100%;
+        flex-direction: column;
+    }
+    .menu ul li a{
+        padding: 5px;
+    }
+    .contenedor{
+        flex-direction: column;
+        align-items: center;
+    }
+    .presentacion-nombre{
+        text-align: center;
+    }
+
+    .presentacion-foto{
+        padding-top: 30px;
+        padding-bottom: 30px;
+    }
+
+    .presentacion-foto img{
+        width: 100%;
+    }
+
+    h1{
+        font-size: 3rem;
+    }
+    
+    h2 ,h3, h4{
+        font-size: 1.5rem;
+        align-self: flex-start;
+    }
+    
+    h5{
+        font-size: 1rem;
+    }
+    a{
+        font-size: 1rem;
+    }
+    .formulario-titulo{
+        padding-bottom: 20px;
+    }
+    .pie-de-pagina{
+        text-align: center;
+        font-size: 0.6rem
+    }
+}
+
+@media (max-width: 735px){
+    .menu ul{
+        width: 100%;
+        flex-direction: column;
+    }
+    .menu ul li a{
+        padding: 5px;
+    }
+    .contenedor{
+        flex-direction: column;
+        align-items: center;
+    }
+    .presentacion-nombre{
+        text-align: center;
+    }
+    .presentacion-foto{
+        padding-top: 30px;
+        padding-bottom: 30px;
+    }
+    .sobre-mi-img img{
+        width: 100%;
+    }
+        .pie-de-pagina{
+        text-align: center;
+        font-size: 0.6rem
+    }
+    .formulario-titulo{
+        margin-bottom: 50px;
+    }
+}
+
+@media (max-width: 768px){
+    .menu{
+        height: 200px;
+    }
+    .menu ul{
+        background-color: transparent;
+    }
+    .menu ul li{
+        background-color: transparent;
+    }
+    .menu ul li a{
+        background-color: transparent;
+        color: #ffffff;
+    }
+    .sobre-mi-texto{
+        padding: 40px;
+    }
+    .tecnologias-iconos i{
+        display: flex;
+        align-content: center;
+    }
+    
+}
+
+
+
+
+@media (max-width: 1500px){
+    .menu ul{
+        background-color: transparent;
+    }
+    .menu ul li{
+        background-color: transparent;
+    }
+    .menu ul li a{
+        background-color: transparent;
+        color: #ffffff;
+    }
+    .contenedor{
+        padding: 50px 0px 50px 0px;
+    }
+    .formulario-titulo{
+        width: 70%;
+    }
+    .formulario-cuerpo{
+        width: 40%;
+    }
+    .contenedor-tecnologias{
+        padding: 20px;
+    }
+    h5{
+        padding-right: 20px;
+    }
+}

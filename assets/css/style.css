@@ -1,42 +1,56 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body {
   font-family: 'Roboto', sans-serif;
   background-color: #f2f2f2;
 }
+
 header {
   background-color: #333;
   color: #fff;
   padding: 10px;
+  width: 100%;
 }
+/* Utilizar Grid para la estructura de la página */
 main {
-  max-width: 800px;
+  max-width: 1300px;
   margin: 0 auto;
   padding: 20px;
+  display: grid;
+  grid-template-columns: repeat(1, 2fr);
+  grid-gap: 1rem;
 }
-nav {
-  list-style: none;
-  display: block;
+
+.contenedor {
+  display: flex;
+  flex-direction: column;
+  place-content: flex-end;
+  border: solid 2px blue;
+}
+
+.contenedor nav {
+  width:70%;
+  display:flex;
   justify-content: space-between;
-  align-items: center;
+  border: solid 2px rgb(23, 173, 123);
+  align-self: center;
 }
 
 /* Utilizar Flexbox para la navegación */
 nav ul {
     display: flex;
     width: 100%;
-    border: 1px solid #ccc;
+    border: 1px solid #ec5f5f;
     justify-content: space-between;
     list-style: none;
   }
-  
-  /* Utilizar Grid para la estructura de la página */
-  main {
-    display: grid;
-    grid-template-columns: repeat(1, 2fr);
-    grid-gap: 1rem;
-  }
-  
+
   section {
-    border: 1px solid #ccc;
+    border: 1px solid #8a0909;
     padding: 1rem;
     border-radius: 5px;
     font-size: 2em;
@@ -56,14 +70,6 @@ header h1 {
   /* Agregar una animación al botón de contacto */
   button {
     animation: pulse 1s ease-in-out infinite;
-  }
-  header div.contenedor {
-    place-content: flex-start;
-  }
-  header div.contenedor nav {
-    width:70%;
-    display:flex;
-    place-content: space-between;
   }
   
   #menu, #menu-check {
@@ -105,7 +111,7 @@ header h1 {
     #menu-check:checked ~ label #menu-cerrar{ 
       display:block;
     }
-    header div.contenedor nav {
+    .contenedor nav {
     position: absolute;
     top:0;
     right:0;
@@ -114,8 +120,6 @@ header h1 {
     padding-top: 0.5em;
     padding-right:1.5em ;
     opacity: 0.8;
-
-
     }
   }
   .carousel-container {
@@ -123,14 +127,11 @@ header h1 {
     max-width: 70em;
     /*background-color: aqua;*/
     overflow: hidden;
- 
-   
     /*overflow: hidden;*/
   }
   .carousel-container .big {
     width: 400%;
     /*background-color: white;*/
-
     display: flex;
     flex-flow: row nowrap;
     justify-content: flex-start;
@@ -159,7 +160,7 @@ header h1 {
     height: 300px;
     object-fit: cover;
   }
- .carousel-card {
+.carousel-card {
     width: 100%;  
     position: relative;
     bottom: 0;
@@ -180,7 +181,6 @@ header h1 {
   
     /*background-color: #333;*/
     /*padding: 1em;*/
-   
     display: flex;
     flex-flow: row nowrap;
     justify-content: center;

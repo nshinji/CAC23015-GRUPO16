@@ -8,6 +8,7 @@
   <!-- Enlazar archivos CSS -->
   <link rel="stylesheet" href="./assets/css/style.css" />
   <!-- Enlazar archivos JavaScript -->
+  <script defer src="./assets/css/index.js"></script>
 </head>
 <body>
   <!-- Encabezado del sitio web -->
@@ -35,16 +36,61 @@
     <!-- Sección 1 -->
     <section>
       <h2>Bienvenidos a nuestro sitio web!</h2>
-      <h3>¿quienes somos?</h3>
+      <h3>Sobre nosotros</h3>
       <p>Somos el equipo # 16 de la comision #23015 del programa Codo a Codo 4.0</p>
       <p>este equipo está compuesto por cuatro integrantes</p>
-      <section>
+      
         <p>aca va un carrousel con foto y nombre</p>
-      </section>
+        <div class="carousel-container">
+          <div class="big">
+              <div class="carousel">
+                  <img src="./assets/nico.png" alt="Image 1">
+                  <div class="carousel-card">
+                    <h2>Hola! soy Nicolas. </h2>
+                    <p>para conocer mas sobre mi te invito a mi <a href="./portfolio_shinji/" target="_blank">portfolio</a></p>
+                  </div>
+                </div>
+                
+                <div class="carousel">
+                  <img src="./assets/emoji_anita.jpg" alt="Image 2">
+                  <div class="carousel-card">
+                    <h2>Hola! me llamo Anita</h2>
+                    <p>para conocer mas sobre mi te invito a mi  <a href="./portfolio_anita/" target="_blank">portfolio</a></p>
+                  </div>
+                </div>
+                
+                <div class="carousel">
+                  <img src="./assets/Andy.jpg" alt="Image 3">
+                  <div class="carousel-card">
+                    <h2>Hola! me dicen Andy</h2>
+                    <p>para conocer mas sobre mi te invito a mi <a href="./portfolio_andy/" target="_blank">portfolio</a></p>
+                  </div>
+                </div>
+                
+                <div class="carousel">
+                  <img src="./assets/furbi.png" alt="Image 4">
+                  <div class="carousel-card">
+                    <h2>Hola! aqui karina</h2>
+                    <p>para conocer mas sobre mi te invito a mi porfolio</p>
+                  </div>
+                </div>  
+                
+          </div>
+          
+          <ul class="dots">
+            <li class="dot active"></li>
+            <li class="dot"></li>
+            <li class="dot"></li>
+            <li class="dot"></li>
+          </ul>
+            
+        </div>
+
+      
     </section>
     <!-- Sección 2 -->
     <section>
-      <h2>Últimos Artículos</h2>
+      <h2>Contacto</h2>
       <ul>
         <li><a href="#">Artículo 1</a></li>
         <li><a href="#">Artículo 2</a></li>
@@ -55,8 +101,9 @@
 
   
   <!-- Pie de página del sitio web -->
-  <footer>
+  <footer class="footer">
     <p>Todos los derechos reservados &copy; 2023</p>
+    <!--<img src="./assets/alf2.png" alt="Image footer">-->
   </footer>
 </body>
 </html>

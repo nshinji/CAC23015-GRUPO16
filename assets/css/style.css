@@ -1,23 +1,62 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: #f2f2f2;
+}
+
+header {
+  background-color: #333;
+  color: #fff;
+  padding: 10px;
+  width: 100%;
+}
+/* Utilizar Grid para la estructura de la página */
+main {
+  max-width: 1300px;
+  margin: 0 auto;
+  padding: 20px;
+  display: grid;
+  grid-template-columns: repeat(1, 2fr);
+  grid-gap: 1rem;
+}
+
+.contenedor {
+  display: flex;
+  flex-direction: column;
+  place-content: flex-end;
+  border: solid 2px blue;
+}
+
+.contenedor nav {
+  width:70%;
+  display:flex;
+  justify-content: space-between;
+  border: solid 2px rgb(23, 173, 123);
+  align-self: center;
+}
+
 /* Utilizar Flexbox para la navegación */
 nav ul {
     display: flex;
-    border: 1px solid #ccc;
+    width: 100%;
+    border: 1px solid #ec5f5f;
     justify-content: space-between;
     list-style: none;
   }
-  
-  /* Utilizar Grid para la estructura de la página */
-  main {
-    display: grid;
-    grid-template-columns: repeat(1, 2fr);
-    grid-gap: 1rem;
-  }
-  
+
   section {
-    border: 1px solid #ccc;
+    border: 1px solid #8a0909;
     padding: 1rem;
     border-radius: 5px;
+    font-size: 2em;
   }
+
+  
   /* Agregar una transición al encabezado */
 header h1 {
     transition: color 0.5s ease;
@@ -32,21 +71,13 @@ header h1 {
   button {
     animation: pulse 1s ease-in-out infinite;
   }
-  header div.contenedor {
-    place-content: flex-start;
-  }
-  header div.contenedor nav {
-    width:70%;
-    display:flex;
-    place-content: space-between;
-  }
   
   #menu, #menu-check {
     display: none;
   }
   @media only screen and (max-width: 900px) {
   header div.contenedor, header div.contenedor ul, header div.contenedor ul li {
-    display: inline;
+    display: block;
     }
     header div.contenedor nav {
       width:100%;
@@ -80,7 +111,7 @@ header h1 {
     #menu-check:checked ~ label #menu-cerrar{ 
       display:block;
     }
-    header div.contenedor nav {
+    .contenedor nav {
     position: absolute;
     top:0;
     right:0;
@@ -89,8 +120,84 @@ header h1 {
     padding-top: 0.5em;
     padding-right:1.5em ;
     opacity: 0.8;
-
-
     }
+  }
+  .carousel-container {
+    width: 90%;
+    max-width: 70em;
+    /*background-color: aqua;*/
+    overflow: hidden;
+    /*overflow: hidden;*/
+  }
+  .carousel-container .big {
+    width: 400%;
+    /*background-color: white;*/
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-start;
+    align-items: center;
+    transition: all .5s ease;
+    transform: translateX(0%);
+  }
+  .carousel {
+    position: relative;
+    /*max-width: 1000px;
+    min-width: 500px;*/
+    width: 100px;
+    height: 90%;
+    
+    overflow: hidden;
+    }
+  .carousel-container .carousel{
+    width: calc(100% / 4 );
+    max-width: 70em;
+    border-radius: 10px;
+    display: flex;
+    flex-flow: row nowrap;  
+  }
+  .carousel img {
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+  }
+.carousel-card {
+    width: 100%;  
+    position: relative;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    padding: 20px;
+    /*font-size: 2em;*/
+  }
+  .carousel-card h2 {
+    margin-top: 0;
+  }
+  
+  .carousel-container .dots{
+    bottom: 0;
+    width: 100%;
+  
+    /*background-color: #333;*/
+    /*padding: 1em;*/
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+  }
+  .carousel-container .dot{
+    width: 1em;
+    height: 1em;
+    background-color:  rgba(0, 0, 0, 0.5);
+    margin: 1em;
+    border-radius: 2em;
+    list-style-type: none;
+  
+  }
+  .carousel-container .dot.active{
+
+    background-color:  rgba(0, 0, 0, 0.767);
+    
   }
   

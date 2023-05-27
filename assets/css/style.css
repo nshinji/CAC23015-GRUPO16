@@ -334,6 +334,18 @@ section {
     height: 100px;
     align-self: flex-end;
   }
-  footer div {
-    background-color: white;
+  #slider{
+    display: flex;
+    width: 100%;
+    overflow-y: hidden;
+    overflow-x: scroll;
+    overflow: -moz-scrollbars-none;
   }
+    #slider  img{
+      padding: 5px;
+      transition: transform 460ms;
+    }
+    #slider img:hover{
+      transform: scale(1.08);
+    }
+    

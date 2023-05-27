@@ -10,18 +10,38 @@ body {
 }
 
 header {
-  background-color: #333;
-  color: #fff;
+  
+  background-color: #ffffff;
+  color: #635757;
   padding: 10px;
   width: 100%;
+}
+.contenedor-titulo{
+ display: flex;
+
+}
+
+#titulo{
+  border: solid 10px coral;
+  display: block;
+  width: 100%;
+  
+}
+.contenedor-titulo h1{
+font-size: 70px;
+font-weight: 400;
+font-family: chaletnewyorknineteeneighty,Arial,Helvetica,sans-serif;
+color: #2d2d2d;
+justify-content: space-around;
 }
 /* Utilizar Grid para la estructura de la página */
 main {
   max-width: 1300px;
   margin: 0 auto;
   padding: 20px;
-  display: grid;
-  grid-template-columns: repeat(1, 2fr);
+  display: flex;
+  flex-direction: column;
+  /*grid-template-columns: repeat(2fr);*/
   grid-gap: 1rem;
 }
 
@@ -29,43 +49,50 @@ main {
   display: flex;
   flex-direction: column;
   place-content: flex-end;
-  border: solid 2px blue;
+  border: solid 10px blue;
 }
 
 .contenedor nav {
-  width:70%;
+  width:100%;
   display:flex;
   justify-content: space-between;
-  border: solid 2px rgb(23, 173, 123);
+  place-content: center;
   align-self: center;
+  background-color: black;
+  padding: 1%;
 }
 
 /* Utilizar Flexbox para la navegación */
 nav ul {
     display: flex;
-    width: 100%;
-    border: 1px solid #ec5f5f;
+    width: 90%;
     justify-content: space-between;
+    
     list-style: none;
-  }
+   
+}
+nav a {
+    color:#ccc;
+    text-decoration: none;
+    font-weight: 300;
+    font-size: large;
+}
+nav a:hover , a:active {
+  color:#ffffff;
+  text-decoration: none;
+  font-weight: 300;
+  font-size: larger;
+}
 
-  section {
+section {
     border: 1px solid #8a0909;
     padding: 1rem;
     border-radius: 5px;
     font-size: 2em;
+    
   }
 
   
-  /* Agregar una transición al encabezado */
-header h1 {
-    transition: color 0.5s ease;
-    border: 1px solid #ccc;
-  }
-  
-  header h1:hover {
-    color: red;
-  }
   
   /* Agregar una animación al botón de contacto */
   button {
@@ -78,16 +105,21 @@ header h1 {
   @media only screen and (max-width: 900px) {
   header div.contenedor, header div.contenedor ul, header div.contenedor ul li {
     display: block;
+
     }
     header div.contenedor nav {
       width:100%;
       display: inline;
+      justify-content: space-between;
+      place-content: center;
+      align-self: center;
+      background-color: black;
     }
   }
   @media only screen and (max-width: 700px) {
     header div.contenedor {
       display:flex;
-      place-content: space-between;
+
     }
     #menu-check:not(:checked) ~ nav{ 
       display:none;
@@ -121,8 +153,13 @@ header h1 {
     padding-right:1.5em ;
     opacity: 0.8;
     }
+    .contenedor nav a {
+      margin: 10px;
+      padding: 10px;
+    }
   }
-  .carousel-container {
+  
+    .carousel-container {
     width: 90%;
     max-width: 70em;
     /*background-color: aqua;*/

@@ -96,14 +96,50 @@
 
       
     </section>
-    <!-- Sección 2 -->
+    <!-- Sección 2 blog-->
+    <section>
+      <h2>blog</h2>
+      <ul>
+        <p><h1>acá va la api</h1></p>
+      </ul>
+    </section>
+    <!-- Sección 3 -->
     <section>
       <h2>Contacto</h2>
-      <ul>
-        <li><a href="#">Artículo 1</a></li>
-        <li><a href="#">Artículo 2</a></li>
-        <li><a href="#">Artículo 3</a></li>
-      </ul>
+      <div class="contacto">
+        <!--Formulario de Contacto !-->
+        <form action= "https://formspree.io/f/xyyavwbn" method="post" id="formulario_contacto">
+
+          <div class="titulo_form"><h1>¡Hablemos!</h1></div><br>
+                      <label class = "label_contact">Nombre<input class="input_form" type="text" id= nombre name="nombre" placeholder="Nombre..."  ></label>
+
+                      <label class = "label_contact">Apellido<input class="input_form" type="text" id=apellido name="apellido" placeholder="Apellido..."   ></label>
+                       
+                      <label class = "label_contact">Correo electrónico<input class="input_form" type="email" id="email" name="mail" placeholder="name@example.com"  ></label>
+                       
+
+                  <h4>¿A quien deseas contactar?</h4>
+                  <br>
+                  <div class="label_contact">
+                      <label class = "label_contact">Cari<input class="input_form"   type="checkbox" id="portfolio" name="portfolio" value="Cari"></label>
+                      <label class = "label_contact">Andy<input class="input_form"  type="checkbox" id="portfolio" name="portfolio" value="Andy"></label> 
+                      <label class = "label_contact">Nico<input class="input_form"   type="checkbox" id="portfolio" name="portfolio" value="Nico"></label>
+                      <label class = "label_contact">Anita<input class="input_form"   type="checkbox" id="portfolio" name="portfolio" value="Anita"></label> 
+                  </div>
+                      <br>
+               
+                  <h4>Asunto</h4><br>      
+                      <label class = "label_contact"><input class="input_form" type="text" id="asunto" name="asunto" placeholder="Escribe un asunto..."></label>
+                      <br>
+             
+                  <h4>Mensaje</h4><br>      
+                      <textarea name="mensaje" id= "mensaje" rows="20" cols="60" placeholder="Escribe un mensaje..."  ></textarea>
+                                              
+                  <input id="btn_2" type="submit" id="enviar" value="Enviar">
+                   
+      </form>    
+      <script src=".css/contact-validation.js"></script>
+      </div>
     </section>
   </main>
 
@@ -111,7 +147,8 @@
   <!-- Pie de página del sitio web -->
   <footer class="footer">
     <p>Todos los derechos reservados &copy; 2023</p>
-    <!--<img src="./assets/alf2.png" alt="Image footer">-->
+
+    <img src="./assets/alf.png" alt="Image footer">
   </footer>
 </body>
 </html>

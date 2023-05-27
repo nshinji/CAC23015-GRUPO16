@@ -6,23 +6,24 @@
 
 body {
   font-family: 'Roboto', sans-serif;
-  background-color: #f2f2f2;
+  background-color: #e4e0e0;
 }
 
 header {
-  
-  background-color: #ffffff;
+  background: #fdd306;
   color: #635757;
-  padding: 10px;
   width: 100%;
+}
+
+header img{
+  object-fit: cover;
 }
 .contenedor-titulo{
  display: flex;
-
-}
+ }
 
 #titulo{
-  border: solid 10px coral;
+  
   display: block;
   width: 100%;
   
@@ -32,7 +33,9 @@ font-size: 70px;
 font-weight: 400;
 font-family: chaletnewyorknineteeneighty,Arial,Helvetica,sans-serif;
 color: #2d2d2d;
-justify-content: space-around;
+text-align: center;
+
+
 }
 /* Utilizar Grid para la estructura de la página */
 main {
@@ -49,7 +52,7 @@ main {
   display: flex;
   flex-direction: column;
   place-content: flex-end;
-  border: solid 10px blue;
+  width: 100%;
 }
 
 .contenedor nav {
@@ -75,7 +78,7 @@ nav a {
     color:#ccc;
     text-decoration: none;
     font-weight: 300;
-    font-size: large;
+    font-size: 20px;
 }
 nav a:hover , a:active {
   color:#ffffff;
@@ -85,10 +88,12 @@ nav a:hover , a:active {
 }
 
 section {
-    border: 1px solid #8a0909;
-    padding: 1rem;
+    background-color: #f2f2f2;
+    padding: 5rem;
     border-radius: 5px;
     font-size: 2em;
+    box-shadow: 10px 10px 12px rgba(0, 0, 0, 0.1);
+    
     
   }
 
@@ -160,11 +165,12 @@ section {
   }
   
     .carousel-container {
-    width: 90%;
+    width: 100%;
     max-width: 70em;
     /*background-color: aqua;*/
     overflow: hidden;
     /*overflow: hidden;*/
+  
   }
   .carousel-container .big {
     width: 400%;
@@ -206,12 +212,22 @@ section {
     background-color: rgba(0, 0, 0, 0.5);
     color: white;
     padding: 20px;
-    /*font-size: 2em;*/
+    
   }
+    /*font-size: 2em;*/
+  
   .carousel-card h2 {
     margin-top: 0;
   }
+  .carousel-card a{
+    color: white;
+    text-decoration: none;
+  }  
+  .carousel-card a:hover{
+    color:#fdd306;
+    text-decoration: none;
   
+  }
   .carousel-container .dots{
     bottom: 0;
     width: 100%;

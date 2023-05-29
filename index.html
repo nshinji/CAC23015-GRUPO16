@@ -16,8 +16,12 @@
    
     <div class="contenedor">
       <div class="contenedor-titulo">
-      <span id="logo">
-        <img src="//aulasvirtuales.bue.edu.ar/pluginfile.php/1/theme_academiaba38/logo/1683548914/logo%20OK.png" alt="SSAALV">
+      <span class="logo">
+        <picture>
+          <source srcset="./assets/logobsmed.svg" media="screen and (max-width:960px) and (min-width:481px)">
+          <source srcset="./assets/logobssmall.svg" media="screen and (max-width:480px)">
+          <img src="//aulasvirtuales.bue.edu.ar/pluginfile.php/1/theme_academiaba38/logo/1683548914/logo%20OK.png" alt="SSAALV">
+        </picture>  
       </span>
       <span id="titulo">
       <h1>CodoACodo 4.0 </h1>
@@ -31,10 +35,10 @@
 
       <nav class="nav">
         <ul>
-          <li><a href="index.html">Inicio</a></li>
-          <li><a href="blog.html">Blog</a></li>
-          <li><a href="contacto.html">Contacto</a></li>
-          <li><a href="sobre-nosotros.html">Sobre Nosotros</a></li>
+          <li><a href="#">Inicio</a></li>
+          <li><a href="#blog">Blog</a></li>
+          <li><a href="#contacto">Contacto</a></li>
+          <li><a href="#sobre-nosotros">Sobre Nosotros</a></li>
         </ul>
       </nav>
     </div>    
@@ -42,11 +46,11 @@
   <!-- Contenido de la página -->
   <main>
     <!-- Sección 1 -->
-    <section>
+    <section id="sobre-nosotros">
       <h2>Bienvenidos a nuestro sitio web!</h2><br>
       <h3>Sobre nosotros</h3><br>
       <p>Somos el equipo # 16 de la comision #23015 del programa Codo a Codo 4.0</p>
-      <p>Este equipo está compuesto por cuatro integrantes</p><br>
+      <p>Este equipo está compuesto por cuatro integrantes.</p><br>
       
         <p>Recorré el carrousel para conocernos!</p><br>
         <div class="carousel-container">
@@ -97,35 +101,19 @@
       
     </section>
     <!-- Sección 2 blog-->
-    <section>
-      <h2>blog</h2>
-      <ul>
-        <p><h1>acá va la api</h1></p>
-      </ul>
+    <section id="blog">
+      <h1>Blog</h1>
+      <p>En esta sección colocamos un ejemplo de uso de API.</p><br>
+      <p>API utilizada: https://jsonplaceholder.typicode.com</p>
+      <p>Banco de imágenes utilizado: https://picsum.photos</p>
+      
       <div id="slider">
 
       </div>
-    <script>
-      const slider = document.getElementById("slider");
-      fetch("https://jsonplaceholder.typicode.com/photos?_limit=20").then((data)=>{
-        //console.log(data.json());
-        return data.json();
-      })
-        .then((jsondata)=>{
-          console.log(jsondata[0].url)
-          jsondata.map((val)=>{
-            console.log(val);
-            key = val.id;
-            let img= document.createElement("img");
-            img.src=`https://picsum.photos/200/300?random=${key}`;
-            slider.appendChild(img);
-  
-          })
-        })
-    </script>
+    <script src="./assets/css/api.js"></script>
     </section>
     <!-- Sección 3 -->
-    <section>
+    <section id="contacto">
       <h2>Contacto</h2>
       <div class="contacto">
         <!--Formulario de Contacto !-->

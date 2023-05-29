@@ -103,68 +103,8 @@ section {
   button {
     animation: pulse 1s ease-in-out infinite;
   }
-  
-  #menu, #menu-check {
-    display: none;
-  }
-  @media only screen and (max-width: 900px) {
-  header div.contenedor, header div.contenedor ul, header div.contenedor ul li {
-    display: block;
-
-    }
-    header div.contenedor nav {
-      width:100%;
-      display: inline;
-      justify-content: space-between;
-      place-content: center;
-      align-self: center;
-      background-color: black;
-    }
-  }
-  @media only screen and (max-width: 700px) {
-    header div.contenedor {
-      display:flex;
-
-    }
-    #menu-check:not(:checked) ~ nav{ 
-      display:none;
-    }
-    #menu-check:checked ~ nav{ 
-      display:block;
-    }
-    #menu {
-      display: block;
-      position: absolute;
-      right: 0.5em;
-      top:0.5em;
-      z-index: 9999;
-    }
-    #menu-cerrar {
-      display:none
-    }
-    #menu-check:checked ~ label #menu-abrir{ 
-      display:none;
-    }
-    #menu-check:checked ~ label #menu-cerrar{ 
-      display:block;
-    }
-    .contenedor nav {
-    position: absolute;
-    top:0;
-    right:0;
-    height: 100%;
-    background-color:rgb(37, 37, 37);
-    padding-top: 0.5em;
-    padding-right:1.5em ;
-    opacity: 0.8;
-    }
-    .contenedor nav a {
-      margin: 10px;
-      padding: 10px;
-    }
-  }
-  
-    .carousel-container {
+ 
+.carousel-container {
     width: 100%;
     max-width: 70em;
     /*background-color: aqua;*/
@@ -348,4 +288,105 @@ section {
     #slider img:hover{
       transform: scale(1.08);
     }
-    
+    #menu, #menu-check {
+      display: none;
+    }
+
+
+@media only screen and (max-width: 960px) {
+    header div.contenedor, header div.contenedor ul, header div.contenedor ul li {
+      display: block;
+  
+      }
+      header div.contenedor nav {
+        width:100%;
+        display: flex;
+        justify-content: space-between;
+        place-content: center;
+        align-self: center;
+        background-color: black;
+      }
+      .contenedor img{
+        max-width: 30%;
+        height: auto;
+       }
+       .contenedor-titulo h1{
+        font-size: 50px;
+      }
+ 
+    }
+
+@media only screen and (max-width: 480px) {
+      header div.contenedor {
+        display:flex;
+  
+      }
+      #menu-check:not(:checked) ~ nav{ 
+        display:none;
+      }
+      #menu-check:checked ~ nav{ 
+        display:block;
+      }
+      #menu {
+        display: block;
+        position: absolute;
+        right: 0.5em;
+        top:0.5em;
+        z-index: 9999;
+      }
+      #menu-cerrar {
+        display:none
+      }
+      #menu-check:checked ~ label #menu-abrir{ 
+        display:none;
+      }
+      #menu-check:checked ~ label #menu-cerrar{ 
+        display:block;
+      }
+      .contenedor nav {
+      position: absolute;
+      top:0;
+      right:0;
+      height: 100%;
+      background-color:rgb(37, 37, 37);
+      padding-top: 0.5em;
+      padding-right:1.5em ;
+      opacity: 0.8;
+      
+      }
+      .contenedor nav a {
+        
+        padding: 1em;
+        font-size: 2em;
+      }
+      .contenedor img{
+      max-width: 30%;
+      height: auto;
+     }
+     .contenedor-titulo h1{
+      font-size: 20px;
+     }
+     section {
+      padding: 1rem;
+      font-size: 0,5em;
+      }
+      .carousel img {
+        width: 100px;
+        height: 100px;
+        object-fit: cover;
+      }
+      .carousel-container .dot{
+        width: 0.5em;
+        height: 0.5em;
+        background-color:  rgba(0, 0, 0, 0.5);
+        margin: 1em;
+        border-radius: 2em;
+        list-style-type: none;
+        }
+        .carousel-card h2{
+          font-size: 20px;
+        }
+        .carousel-card p{
+          font-size: 15px;
+        }
+    }    
